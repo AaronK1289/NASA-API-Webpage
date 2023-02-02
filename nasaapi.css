@@ -1,0 +1,124 @@
+.center {
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+    color: white;
+}
+
+#datetime-picker {
+    color:white;
+}
+p {
+    color: white;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: block;
+}
+
+.title-section {
+    padding: 1rem;
+}
+
+label {
+    color: white;
+}
+
+#butt {
+    color: white;
+    padding: 1px 10px;
+    text-align: center;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    color: black;
+}
+
+.border {
+    border: 3px solid black;
+}
+
+body {
+    background-color: #231942;
+}
+
+
+.gridContainer {
+    padding: 0;
+    list-style-type: none;
+    background-color: lightskyblue;
+    display: grid;
+    height: 800px;
+    grid-template-columns: [start] 25% [line1] 25% [line2] 25% [line3] 25% [end]; /* Here we define the name of the line and the percentage of each column*/
+    grid-template-rows: [row1-start] 16% [row1-end] 16% [row2-end] 16% [row3-end] 16% [row4-end] 16% [row5-end] 16% [row6-end];
+
+    /*
+    For the defined grid template we can assign name for each block area that we can assign to child elements.
+     */
+    grid-template-areas:
+        "header header header header"
+        "item1 item1 . item2"
+        ". item3 . ."
+        "footer footer footer footer";
+}
+
+#item1- {
+    grid-column: start / line2;
+    grid-row: row1-end / row5-end;
+    background-color:#E0B1CB;
+    height: 512px;
+}
+
+#item2- {
+    grid-column: line2 / end;
+    grid-row: row1-end / row5-end;
+    background-color: black;
+    height: 512px;
+}
+#item4- {
+    grid-column: start / line2;
+    grid-row: row5-end / row6-end;
+    background-color: #5E548E;
+    color: white;
+    padding: 70px;
+    height: 15px;
+}
+
+#item5- {
+    grid-column: line2 / end;
+    grid-row: row5-end / row6-end;
+    background-color: #5E548E;
+    color: white;
+    padding: 70px;
+    height: 15px;
+}
+
+#header- {
+    grid-column-start: start;
+    grid-column-end:  end;
+    grid-row-start: row1-start;
+    grid-row-end:  row1-end;
+    justify-self:  stretch; /* align along column (inline) */
+    align-self: stretch; /* align along row */
+    background-color: #5E548E;
+    color: white;
+    font-size: 4vh;
+    padding: 35px;
+    height: 55px;
+}
+
+/*
+We defining a flex display for the div item
+ */
+#header- div {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+}
